@@ -1,4 +1,4 @@
-/* Rule Set Rule_set_1 version 1.0 generated on Mon Feb 05 14:22:05 UTC 2024 */
+/* Rule Set Rule_set_1 version 1.0 generated on Mon Feb 05 14:24:25 UTC 2024 */
 
 DS2_OPTIONS LOGICALEXPR = STANDARD;
 DS2_OPTIONS SCOND = WARNING;
@@ -22,7 +22,7 @@ DS2_OPTIONS MISSING_NOTE;
 
             /* lookup: $LQIMOQS5JPNBSVHXXDE3JYSBBQU_K */
             DataGrid_create(lookup_0, '[{"metadata":[{"key":"string"},{"value":"string"}]}, {"data":[
-["key","value"]]}]');
+["key","value1"]]}]');
 
       end;
 
