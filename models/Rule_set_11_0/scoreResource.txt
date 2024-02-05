@@ -1,4 +1,4 @@
-/* Rule Set Rule_set_1 version 1.0 generated on Mon Feb 05 07:37:42 UTC 2024 */
+/* Rule Set Rule_set_1 version 1.0 generated on Mon Feb 05 14:22:05 UTC 2024 */
 
 DS2_OPTIONS LOGICALEXPR = STANDARD;
 DS2_OPTIONS SCOND = WARNING;
@@ -10,12 +10,86 @@ DS2_OPTIONS MISSING_NOTE;
       dcl package logger _logger('App.SASDCM');
       dcl package logger logr_variableTrace('App.TableServices.DS2.Runtime.TraceVariables');
 
+      dcl varchar(512)   lookup_value;
+
+      dcl varchar(256)   lookup_key;
+      dcl package datagrid lookup_0 ('lookup_0'); /* lookup for $LQIMOQS5JPNBSVHXXDE3JYSBBQU_K */
+
+      /* for inline lookups we initialize datagrids in the package constructor */
+      forward DataGrid_create;
+      forward DataGrid_FilteredGet;
+      method BRM_51_RuleSet_0();
+
+            /* lookup: $LQIMOQS5JPNBSVHXXDE3JYSBBQU_K */
+            DataGrid_create(lookup_0, '[{"metadata":[{"key":"string"},{"value":"string"}]}, {"data":[
+["key","value"]]}]');
+
+      end;
+
+      method getLookupValue() returns varchar(512);
+        return lookup_value;
+      end;
+
+      method doLookupFind(varchar(256) lookupKey, varchar(100) lookupName) returns int;
+        dcl integer rc;
+        rc = 1;
+        lookup_value = '';
+        if ( not missing(lookupKey) ) then do;
+
+                lookup_key = strip(lookupkey);
+
+                select(lookupName);
+                  when('$LQIMOQS5JPNBSVHXXDE3JYSBBQU_K.') lookup_value = DataGrid_FilteredGet(lookup_0, 'value', 'key', 'eq', lookup_key);
+                end;
+
+                if ( not missing(lookup_value) ) then do;
+                  rc = 0;
+                end;
+        end;
+
+        return rc;
+      end;
+
         /* ---- RULE FIRED FLAG COUNT = 0 ---- */
+
+method DataGrid_create(package datagrid aGrid,
+varchar(10485760) JSONTableString)
+returns int;
+    dcl int rowCnt;    
+    rowCnt = aGrid.deserialize(JSONTableString);
+    if (rowCnt = 0) then
+        rowCnt = aGrid.rowCount();
+    return rowCnt;    
+end;
+
+method DataGrid_FilteredGet(package datagrid aGrid,
+varchar(255) srcCol,
+varchar(255) cmpCol,
+char(2)      cmpOp,
+varchar(32767) cmpVal)
+returns varchar;
+    dcl varchar(32767) colVal;
+    colVal = aGrid.filteredGet(cmpCol, cmpOp, cmpVal, srcCol);
+    return colVal;
+end;
+
+method DataGrid_FilteredGet(package datagrid aGrid,
+varchar(255) srcCol,
+varchar(255) cmpCol,
+char(2)      cmpOp,
+varchar(32767) cmpVal,
+int start_row,
+int end_row)
+returns varchar;
+    dcl varchar(32767) colVal;
+    colVal = aGrid.filteredGet(cmpCol, cmpOp, cmpVal, srcCol,start_row,end_row);
+    return colVal;
+end;
 
     method execute_internal( in_out varchar "FGJGGJ",in_out double "PUAN");
 
 ;
-         if ("FGJGGJ" = '123') then do;
+         if (0 = doLookupFind("FGJGGJ",'$LQIMOQS5JPNBSVHXXDE3JYSBBQU_K.')) then do;
          "PUAN" = 100.0;
 
          end;
@@ -27,6 +101,8 @@ DS2_OPTIONS MISSING_NOTE;
 
    method execute( varchar(100) "FGJGGJ_",in_out varchar "FGJGGJ",in_out double "PUAN");
       "FGJGGJ" = "FGJGGJ_"; 
+
+BRM_51_RuleSet_0();
 
       execute_internal(
         "FGJGGJ"
