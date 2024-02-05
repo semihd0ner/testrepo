@@ -1,0 +1,19 @@
+[
+    {
+        "id" : "9deffbd4-775d-4d76-a604-e401a113a1c3",
+        "name" : "Rule_set_1",
+        "type" : "application/vnd.sas.business.rule.set",
+        "versionId" : "0f76f176-1bfe-451e-a1ae-f13f2d054b64",
+        "versionName" : "1.0",
+        "activeVersionReference" : false,
+        "referencingDecisions" : [
+            {
+                "id" : "6f3c79e2-f310-473e-a1e2-888a3836310c",
+                "name" : "Decision_1",
+                "versionId" : "0ae147df-5872-4f55-a808-569f6746dc67"
+            }
+        ],
+        "customContext" : false,
+        "customContextMicroAnalytics" : false
+    }
+]

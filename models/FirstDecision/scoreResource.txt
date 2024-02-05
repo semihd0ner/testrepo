@@ -1,0 +1,110 @@
+
+
+ds2_options scond=WARNING;
+/* Rule Set Rule_set_1 version 1.0 generated on Mon Feb 05 07:40:28 UTC 2024 */
+
+DS2_OPTIONS LOGICALEXPR = STANDARD;
+DS2_OPTIONS SCOND = WARNING;
+DS2_OPTIONS MISSING_NOTE;
+
+/* PACKAGE_START: packageName="Decision_1_Rule_set_1_1_0", referencedBy=Decision_1, name=Rule_set_1, nodeId=3bbb2b24-3804-4b66-b0e4-f66da3509f19, objectUri=/businessRules/ruleSets/9deffbd4-775d-4d76-a604-e401a113a1c3/revisions/0f76f176-1bfe-451e-a1ae-f13f2d054b64 */
+  package "Decision_1_Rule_set_1_1_0"  / inline;
+
+      dcl package logger _logger('App.SASDCM');
+      dcl package logger logr_variableTrace('App.TableServices.DS2.Runtime.TraceVariables');
+
+        /* ---- RULE FIRED FLAG COUNT = 0 ---- */
+            method setruleFiredBasePosition(integer newBasePosition); end;
+            method setDecisionNodeID(varchar newDecisonNodeID); end;
+            method enableRuleFiredRecording(); end;
+            method disableRuleFiredRecording(); end;
+            method initRuleFireHashes(); end;
+            method getRuleFiredFlagCount() returns integer;  return 0; end;
+            method recordRuleFired(
+              in_out char    ruleFiredFlags,
+              in_out integer rulesFiredForRecordCount,
+              char(36)       this_rule_id);
+            end;
+
+    method execute( in_out varchar "FGJGGJ",in_out double "PUAN");
+
+;
+         if ("FGJGGJ" = '123') then do;
+         "PUAN" = 100.0;
+
+         end;
+
+         "end_36d58e43-23b3-4891-aa58-d128a98b70a4":
+
+      rule_end:  /* label for rule RETURN action */
+    end;
+
+/* PACKAGE_END: "Decision_1_Rule_set_1_1_0" */
+  endpackage;
+
+  DS2_OPTIONS LOGICALEXPR = STANDARD;
+  DS2_OPTIONS SCOND = WARNING;
+  DS2_OPTIONS MISSING_NOTE;
+
+/* Decision Decision_1 version 1.0 generated on Mon Feb 05 07:40:28 UTC 2024 */
+/* {PACKAGE_START} */
+  package FirstDecision  / inline;
+    dcl package logger logr_ppn('App.tk.SID.Ppn');
+    dcl package logger logr_perf('App.tk.SID.Perf');
+    dcl double timer_start;
+    dcl double elapsed_time;
+    dcl double total_timer_start;
+    dcl double total_elapsed_time;
+
+    dcl package "Decision_1_Rule_set_1_1_0" "Decision_1_Rule_set_1_1_0_hdl"();
+
+     method init();
+
+     end;
+
+    method execute_internal(
+       in_out varchar "FGJGGJ"
+      ,in_out double "PUAN"
+
+      ,in_out integer "_filter_"
+
+    );
+        dcl integer dg_filter_;
+
+       dcl integer _masRC;
+
+        total_timer_start = datetime();
+
+        timer_start = datetime();
+        "Decision_1_Rule_set_1_1_0_hdl".execute("FGJGGJ", "PUAN");
+
+        elapsed_time = datetime() - timer_start;
+        logr_perf.log( 'd', 'Package Name: FirstDecision, Node Name: Rule_set_1, Node ID: 3bbb2b24-3804-4b66-b0e4-f66da3509f19, NODE DURATION: ' .. elapsed_time);
+
+        "end":/*label for decision node link to flow end*/
+
+        total_elapsed_time = datetime() - total_timer_start;
+        logr_perf.log( 'd', 'Package Name: FirstDecision, TOTAL DURATION: ' .. total_elapsed_time);
+
+     end;
+
+    method execute(
+       varchar(100) "FGJGGJ_"
+      ,in_out varchar "FGJGGJ"
+      ,in_out double "PUAN"
+);
+
+      dcl integer _filter_;
+
+          "FGJGGJ" = "FGJGGJ_";
+
+          execute_internal(
+          "FGJGGJ"
+         ,"PUAN"
+      ,"_filter_"
+      );
+
+    end;
+
+/* {PACKAGE_END} */
+  endpackage;
