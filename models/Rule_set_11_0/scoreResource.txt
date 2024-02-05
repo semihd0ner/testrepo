@@ -1,0 +1,39 @@
+/* Rule Set Rule_set_1 version 1.0 generated on Mon Feb 05 07:37:42 UTC 2024 */
+
+DS2_OPTIONS LOGICALEXPR = STANDARD;
+DS2_OPTIONS SCOND = WARNING;
+DS2_OPTIONS MISSING_NOTE;
+
+/* {PACKAGE_START} */
+  package Rule_set_11_0  / inline;
+
+      dcl package logger _logger('App.SASDCM');
+      dcl package logger logr_variableTrace('App.TableServices.DS2.Runtime.TraceVariables');
+
+        /* ---- RULE FIRED FLAG COUNT = 0 ---- */
+
+    method execute_internal( in_out varchar "FGJGGJ",in_out double "PUAN");
+
+;
+         if ("FGJGGJ" = '123') then do;
+         "PUAN" = 100.0;
+
+         end;
+
+         "end_36d58e43-23b3-4891-aa58-d128a98b70a4":
+
+      rule_end:  /* label for rule RETURN action */
+    end;
+
+   method execute( varchar(100) "FGJGGJ_",in_out varchar "FGJGGJ",in_out double "PUAN");
+      "FGJGGJ" = "FGJGGJ_"; 
+
+      execute_internal(
+        "FGJGGJ"
+      , "PUAN"
+);
+
+    end;
+
+/* {PACKAGE_END} */
+  endpackage;

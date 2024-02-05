@@ -1,0 +1,42 @@
+{
+    "inputs" : [
+        {
+            "creationTimeStamp" : "2024-01-31T06:32:06.710Z",
+            "modifiedTimeStamp" : "2024-01-31T06:32:06.710Z",
+            "createdBy" : "semih.doner",
+            "modifiedBy" : "semih.doner",
+            "id" : "f0ace850-7661-4001-f94f-ce1fa0c29c45",
+            "name" : "FGJGGJ",
+            "dataType" : "string",
+            "direction" : "inOut",
+            "description" : "",
+            "generateDataGridColumns" : false
+        }
+    ],
+    "outputs" : [
+        {
+            "creationTimeStamp" : "2024-01-31T06:32:06.710Z",
+            "modifiedTimeStamp" : "2024-01-31T06:32:06.710Z",
+            "createdBy" : "semih.doner",
+            "modifiedBy" : "semih.doner",
+            "id" : "f0ace850-7661-4001-f94f-ce1fa0c29c45",
+            "name" : "FGJGGJ",
+            "dataType" : "string",
+            "direction" : "inOut",
+            "description" : "",
+            "generateDataGridColumns" : false
+        },
+        {
+            "creationTimeStamp" : "2024-01-31T06:32:06.736Z",
+            "modifiedTimeStamp" : "2024-01-31T06:32:06.736Z",
+            "createdBy" : "semih.doner",
+            "modifiedBy" : "semih.doner",
+            "id" : "27c81c2c-3df5-4495-93c2-991b3377f438",
+            "name" : "PUAN",
+            "dataType" : "integer",
+            "direction" : "output",
+            "description" : "",
+            "generateDataGridColumns" : false
+        }
+    ]
+}
