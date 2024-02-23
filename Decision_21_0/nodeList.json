@@ -1,0 +1,36 @@
+[
+    {
+        "id" : "9deffbd4-775d-4d76-a604-e401a113a1c3",
+        "name" : "Rule_set_1",
+        "type" : "application/vnd.sas.business.rule.set",
+        "versionId" : "0f76f176-1bfe-451e-a1ae-f13f2d054b64",
+        "versionName" : "1.0",
+        "activeVersionReference" : false,
+        "referencingDecisions" : [
+            {
+                "id" : "a5adb055-3de9-45f5-ab1a-f0eefb74aedc",
+                "name" : "Decision_2",
+                "versionId" : "80aafc20-4a5d-42c5-add5-badd528714ed"
+            }
+        ],
+        "customContext" : false,
+        "customContextMicroAnalytics" : false
+    },
+    {
+        "id" : "8218e84b-a97b-432a-9ef7-19369c482185",
+        "name" : "Lookup_table_1",
+        "type" : "application/vnd.sas.business.rule.lookup",
+        "versionId" : "b9d0baf1-3373-4506-8019-f322dee7f340",
+        "versionName" : "1.1",
+        "activeVersionReference" : true,
+        "referencingDecisions" : [
+            {
+                "id" : "a5adb055-3de9-45f5-ab1a-f0eefb74aedc",
+                "name" : "Decision_2",
+                "versionId" : "80aafc20-4a5d-42c5-add5-badd528714ed"
+            }
+        ],
+        "customContext" : false,
+        "customContextMicroAnalytics" : false
+    }
+]
