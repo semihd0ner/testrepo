@@ -1,0 +1,172 @@
+{
+  "creationTimeStamp": "2024-02-23T09:07:41.504072Z",
+  "createdBy": "semih.doner",
+  "modifiedTimeStamp": "2024-02-23T09:07:41.504073Z",
+  "modifiedBy": "semih.doner",
+  "version": 1,
+  "id": "7b069ee2-68dd-42c7-8c84-5536d551590c",
+  "destinationName": "GitDemo",
+  "destination": {
+    "creationTimeStamp": "2024-02-05T07:36:29.717533Z",
+    "createdBy": "sasboot",
+    "modifiedTimeStamp": "2024-02-05T07:36:29.717534Z",
+    "modifiedBy": "sasboot",
+    "version": 2,
+    "id": "e2c52462-5501-4cb7-a8e9-2521f1a1ceb4",
+    "name": "GitDemo",
+    "destinationType": "git",
+    "properties": [
+      {
+        "name": "credDomainId",
+        "value": "GitDomain3"
+      },
+      {
+        "name": "remoteRepositoryURL",
+        "value": "https://github.com/semihd0ner/testrepo.git"
+      },
+      {
+        "name": "localRepositoryLocation",
+        "value": "/gitrepo/testrepo"
+      },
+      {
+        "name": "userEmail",
+        "value": "semih.doner@sadeyazilim.com"
+      },
+      {
+        "name": "userName",
+        "value": "semihd0ner"
+      },
+      {
+        "name": "codeGenerationMode",
+        "value": "mas"
+      },
+      {
+        "name": "gitBranch",
+        "value": "main"
+      }
+    ],
+    "links": [
+      {
+        "method": "GET",
+        "rel": "up",
+        "href": "/modelPublish/destinations",
+        "uri": "/modelPublish/destinations",
+        "type": "application/vnd.sas.collection"
+      },
+      {
+        "method": "GET",
+        "rel": "self",
+        "href": "/modelPublish/destinations/GitDemo",
+        "uri": "/modelPublish/destinations/GitDemo",
+        "type": "application/vnd.sas.models.publishing.destination"
+      },
+      {
+        "method": "DELETE",
+        "rel": "delete",
+        "href": "/modelPublish/destinations/GitDemo",
+        "uri": "/modelPublish/destinations/GitDemo"
+      },
+      {
+        "method": "PUT",
+        "rel": "update",
+        "href": "/modelPublish/destinations/GitDemo",
+        "uri": "/modelPublish/destinations/GitDemo",
+        "type": "application/vnd.sas.models.publishing.destination"
+      },
+      {
+        "method": "GET",
+        "rel": "getGitFolders",
+        "href": "/modelPublish/destinations/GitDemo/gitFolders",
+        "uri": "/modelPublish/destinations/GitDemo/gitFolders",
+        "type": "application/vnd.sas.collection"
+      }
+    ]
+  },
+  "content": {
+    "creationTimeStamp": "0001-01-01T00:00:00Z",
+    "modifiedTimeStamp": "0001-01-01T00:00:00Z",
+    "modelName": "Decision_21_0",
+    "codeType": "ds2",
+    "codeURI": "/decisions/flows/a5adb055-3de9-45f5-ab1a-f0eefb74aedc/revisions/80aafc20-4a5d-42c5-add5-badd528714ed/code?rootPackageName=Decision_21_0\u0026lookupMode=INLINE\u0026treatmentGroupMode=INLINE\u0026globalVariableMode=INLINE\u0026traversedPathFlag=false\u0026isGeneratingRuleFiredColumn=false\u0026codeTarget=gitMas",
+    "codeMediaType": "text/vnd.sas.source.ds2.async",
+    "sourceURI": "/decisions/flows/a5adb055-3de9-45f5-ab1a-f0eefb74aedc/revisions/80aafc20-4a5d-42c5-add5-badd528714ed",
+    "publishLevel": "decision"
+  },
+  "properties": {
+    "gitFolderPath": "Decision_21_0",
+    "gitRepositoryURL": "https://github.com/semihd0ner/testrepo.git"
+  },
+  "sourceURI": "/decisions/flows/a5adb055-3de9-45f5-ab1a-f0eefb74aedc/revisions/80aafc20-4a5d-42c5-add5-badd528714ed",
+  "resources": [
+    {
+      "creationTimeStamp": "2024-01-31T06:30:05.776Z",
+      "createdBy": "semih.doner",
+      "modifiedTimeStamp": "2024-02-05T14:21:25.558Z",
+      "modifiedBy": "semih.doner",
+      "name": "Rule_set_1",
+      "uri": "/businessRules/ruleSets/9deffbd4-775d-4d76-a604-e401a113a1c3/revisions/0f76f176-1bfe-451e-a1ae-f13f2d054b64",
+      "mediaType": "application/vnd.sas.business.rule.set",
+      "contentVersion": "1.0",
+      "inline": true
+    },
+    {
+      "creationTimeStamp": "2024-02-05T14:21:01.008Z",
+      "createdBy": "semih.doner",
+      "modifiedTimeStamp": "2024-02-05T14:24:14.858Z",
+      "modifiedBy": "semih.doner",
+      "name": "Lookup_table_1",
+      "uri": "/referenceData/domains/8218e84b-a97b-432a-9ef7-19369c482185/contents/b9d0baf1-3373-4506-8019-f322dee7f340",
+      "mediaType": "application/vnd.sas.data.reference.domain",
+      "contentVersion": "1.1",
+      "inline": true
+    }
+  ],
+  "inputVariables": [
+    {
+      "name": "FGJGGJ",
+      "description": "",
+      "role": "",
+      "type": "string",
+      "level": "",
+      "format": "",
+      "aggregation": "",
+      "length": null
+    }
+  ],
+  "outputVariables": [
+    {
+      "name": "FGJGGJ",
+      "description": "",
+      "role": "",
+      "type": "string",
+      "level": "",
+      "format": "",
+      "aggregation": "",
+      "length": null
+    },
+    {
+      "name": "PUAN",
+      "description": "",
+      "role": "",
+      "type": "integer",
+      "level": "",
+      "format": "",
+      "aggregation": "",
+      "length": null
+    }
+  ],
+  "component": {
+    "majorVersion": 1,
+    "name": "Decision_2"
+  },
+  "product": {
+    "majorVersion": 3,
+    "minorVersion": 110,
+    "versionName": "3.110.6",
+    "name": "Decisions Service"
+  },
+  "service": {
+    "name": "Model Publish service"
+  },
+  "baseImage": {}
+}
